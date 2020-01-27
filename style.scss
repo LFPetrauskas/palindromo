@@ -1,0 +1,69 @@
+$page-width: 400px;
+$bg-dark: #ebebeb;
+$bg-dark-hover: lighten($bg-dark, 5);
+$border-line: darken($bg-dark, 10);
+$header-heigth: 50px;
+
+body {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: Calibri;
+  justify-content: center;
+}
+
+.header {
+  align-items: center;
+  background-color: $bg-dark;
+  border: 1px solid $border-line;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+
+  display: flex;
+  height: $header-heigth;
+  justify-content: space-around;
+  width: $page-width;
+
+  button {
+    background-color: $bg-dark;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    &:hover {
+      background-color: $bg-dark-hover;
+    }
+  }
+}
+
+.app {
+  width: $page-width;
+  border: 1px solid $border-line;
+  .pad {
+    padding: 10px;
+  }
+  .inputPalindromo {
+    height: 30px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .table {
+    border-top: 1px solid $border-line;
+    border-collapse: collapse;
+    width: 100%;
+
+    .trowhead,
+    .trowbody {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    .trowbody { 
+      &:nth-child(odd) {
+        background-color: #ccc;
+      }
+    }
+  }
+}
